@@ -1,0 +1,22 @@
+DROP TABLE home_books;
+
+CREATE TABLE home_books(
+	name	varchar(60),
+	second_name	varchar(60),
+	otchestvo	varchar(60),
+	year_print	int, -- время издания
+	publishing	varchar(60),
+	storage		varchar(100), -- место хранения
+	on_storage	varchar(40),
+	quarcode_add	varchar(40),
+	date_add	varchar(40),
+	id	int);
+
+INSERT INTO home_books (name, second_name, otchestvo, year_print, publishing, storage, on_storage,quarcode_add, date_add, id)
+ VALUES ('Борис', 'Ермаков', 'Петрович', 1995, 'ЭКСПО', 'в шкафу', 'первый шкаф, вторая полка, второй ряд', 'нет куаркода', '03-06-2019', 1);
+
+
+INSERT INTO home_books (name, second_name, otchestvo, year_print, publishing, storage, on_storage,quarcode_add, date_add, id)
+ VALUES ('Борис', 'Алексеев', 'Алексеевич', 1995, 'ЭКСПО', 'в шкафу', 'первый шкаф, вторая полка, второй ряд', 'нет куаркода', '03-08-2017', 3);
+
+
