@@ -42,8 +42,8 @@ class DatabasConnector:
             print("ОШИБКА:  таблица pet не существует")
 
     def insert_data_to_table(self):
-        name = 'Борис'
-        #create_table_command1 = "Insert INTO home_books (name) VALUES ('%s')" % name
+        name = ["Борис", "Петров"]
+        #create_table_command1 = u"Insert INTO home_books (name, second_name) VALUES ('"+name[0]+"','"+name[1]+"')"
         create_table_command = u'''
                                 INSERT INTO home_books (name, second_name, otchestvo, year_print, publishing, storage,
                                  on_storage,quarcode_add, date_add, id)
@@ -52,14 +52,19 @@ class DatabasConnector:
         '''
         self.cursor.execute(create_table_command)
 
-    #def seach_data_in_table(self):
+    def seach_data_in_table(self):
+        self.cursor.execute("SELECT * FROM home_books")
+        data = self.cursor.fetchall()
+        for i in data:
+            print(i)
 
 if __name__== '__main__':
     database_connection = DatabasConnector()
-    database_connection.drop_table()
-    database_connection.create_table()
     #database_connection.drop_table()
-    database_connection.insert_data_to_table()
+    #database_connection.create_table()
+    #database_connection.drop_table()
+    #database_connection.insert_data_to_table()
+    database_connection.seach_data_in_table()
 
 
 #https://www.youtube.com/watch?v=Z9txOWCWMwA

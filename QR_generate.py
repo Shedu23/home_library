@@ -1,4 +1,5 @@
-import PyQRCode
+#import PyQRCode
+import pyqrcode
 
 for i in range(1,11):
     img_name = "The book number id is : " + str(i)
