@@ -18,7 +18,7 @@ if 'library' in con.tables():
     query.bindValue(':name', 'Александр')
     query.bindValue(':sname', 'Сергеевич')
     query.bindValue(':fam', 'Пушкин')
-    query.bindValue(':nbook', 'Собрание сочиненеий. Том 4. Евгений. Онегин. Драматтические произведения')
+    query.bindValue(':nbook', 'Собрание сочиненеий. Том 1. Евгений. Онегин. Драматтические произведения')
     query.bindValue(':byear', 1960)
     query.bindValue(':puble', 'Государственное издательство художественной литературы')
     query.bindValue(':store', 'первая полка первый ряд')
